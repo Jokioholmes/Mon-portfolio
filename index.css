@@ -67,7 +67,7 @@ button:hover {
 .bouton-cv {
   background: linear-gradient(135deg, #6c5ce7 0%, #5647c7 100%);
   color: #ffffff;
-  border-radius: 0;
+  border-radius: 5px 25%;
   border: none;
   font-weight: bold;
   padding: 15px 30px;
@@ -388,6 +388,9 @@ h6 {
   transform: rotate(45deg);
 }
 
+/* RESPONSIVE DESIGN - TABLETTES ET MOBILE*/
+
+/* TABLETTES (1024px et moins) */
 @media (max-width: 1024px) {
   .realisations .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -403,31 +406,170 @@ h6 {
     flex-direction: column;
     gap: 40px;
   }
+
+  .grille-compétences {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
+/* MOBILE (768px et moins) */
 @media (max-width: 768px) {
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* HEADER */
   header {
     flex-direction: column;
-    padding: 20px;
+    padding: 15px 20px;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
+  h1 {
+    font-size: 24px;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* NAVIGATION */
   nav {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
   }
 
+  ul {
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  ul li {
+    width: 100%;
+  }
+
+  ul li a {
+    display: block;
+    padding: 10px;
+  }
+
+  .bouton-cv {
+    width: 90%;
+    max-width: 250px;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+  }
+
+  /* SECTIONS GÉNÉRALES*/
   section {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 40px 15px;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
+  .description,
+  .image {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* IMAGES */
   img {
     width: 100%;
     max-width: 300px;
+    height: auto;
   }
 
+  /* TITRES */
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4,
+  h6 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  
+  button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+  }
+
+  #information,
+  .projet {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px auto;
+  }
+
+  /* SECTION STATISTIQUES */
+  .stat {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .stat-item h5 {
+    font-size: 48px;
+  }
+
+  /* SECTION SERVICES */
+  .Services {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form {
+    width: 100%;
+    padding: 25px 20px;
+    box-sizing: border-box;
+  }
+
+  /* SECTION RÉALISATIONS */
   .realisations {
-    padding: 60px 0;
+    padding: 60px 15px;
+  }
+
+  .realisations .container {
+    padding: 0 10px;
   }
 
   .realisations .title {
@@ -448,7 +590,212 @@ h6 {
   .realisations .image {
     height: 220px;
   }
+
+  /* SECTION COMPÉTENCES */
+  .compétences {
+    padding: 60px 15px;
+  }
+
+  .grille-compétences {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  /* SECTION TÉMOIGNAGES */
+  .carrousel-temoignages {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .bouton-carrousel {
+    display: none;
+  }
+
+  .Témoignages {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  /* SECTION CONTACT */
+  .enveloppe-contact {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .info1 {
+    padding: 0 15px;
+  }
+
+  .info1 .titre {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .details {
+    align-items: center;
+  }
+
+  .Composants {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .liens {
+    justify-content: center;
+  }
+
+  .enveloppe-formulaire {
+    padding: 25px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formulaire-contact input,
+  .formulaire-contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formulaire-contact button,
+  .bouton-email,
+  .bouton-whatsapp-alt {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+   
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer .conteneur {
+    padding: 0 10px;
+  }
+
+  .contenu-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .liens-footer {
+    align-items: center;
+  }
+
+  .reseaux-sociaux {
+    text-align: center;
+  }
+
+  .liens-sociaux {
+    justify-content: center;
+  }
+
+  /*  SECTIONS SPÉCIALES  */
+  .new-section,
+  .second,
+  .compétences,
+  .Les-Témoignages,
+  .contact {
+    width: 100%;
+    padding: 60px 15px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
 }
+
+/* TRÈS PETITS ÉCRANS (375px et moins) */
+@media (max-width: 375px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4,
+  h6 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 30px 10px;
+  }
+
+  .stat-item h5 {
+    font-size: 42px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Animation au scroll */
+.animer-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animer-scroll.apparait {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bouton retour en haut */
+.bouton-retour-haut {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #6c5ce7;
+  color: #ffffff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.bouton-retour-haut.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bouton-retour-haut:hover {
+  background: #5647c7;
+  transform: translateY(-5px);
+}
+
+/* Effet 3D sur les cartes */
+.realisations .card {
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+/* ============================================
+   SECTIONS MANQUANTES - À AJOUTER À LA FIN
+   ============================================ */
+
 /* COMPÉTENCES */
 .compétences {
   padding: 100px 0;
@@ -657,13 +1004,6 @@ h6 {
   text-align: left;
 }
 
-.description {
-  font-size: 16px;
-  color: #b0b0b0;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
 .details {
   display: flex;
   flex-direction: column;
@@ -752,7 +1092,80 @@ h6 {
   background: #5647c7;
 }
 
-/* FOOTER  */
+/* BOUTON EMAIL */
+.bouton-email {
+  background: #6c5ce7;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.bouton-email:hover {
+  background: #5647c7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+}
+
+/* SÉPARATEUR OU */
+.separateur-ou {
+  text-align: center;
+  margin: 25px 0;
+  position: relative;
+}
+
+.separateur-ou::before,
+.separateur-ou::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: #2d2d44;
+}
+
+.separateur-ou::before {
+  left: 0;
+}
+
+.separateur-ou::after {
+  right: 0;
+}
+
+.separateur-ou span {
+  background: #1a1a2e;
+  padding: 0 15px;
+  color: #b0b0b0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* BOUTON WHATSAPP */
+.bouton-whatsapp-alt {
+  display: block;
+  text-align: center;
+  background: transparent;
+  color: #25d366;
+  padding: 15px 30px;
+  border: 2px solid #25d366;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bouton-whatsapp-alt:hover {
+  background: #25d366;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* FOOTER */
 .footer {
   position: relative;
   background: #0f0f0f;
@@ -842,98 +1255,6 @@ h6 {
   transform: translateY(-3px);
 }
 
-/* RESPONSIVE FOOTER */
-@media (max-width: 768px) {
-  .contenu-footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .liens-footer {
-    align-items: center;
-  }
-
-  .reseaux-sociaux {
-    text-align: center;
-  }
-
-  .liens-sociaux {
-    justify-content: center;
-  }
-}
-/* BOUTON EMAIL SANS ICONE */
-.bouton-email {
-  background: #6c5ce7;
-  color: #ffffff;
-  padding: 15px 30px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.bouton-email:hover {
-  background: #5647c7;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
-}
-
-/* SÉPARATEUR OU */
-.separateur-ou {
-  text-align: center;
-  margin: 25px 0;
-  position: relative;
-}
-
-.separateur-ou::before,
-.separateur-ou::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 42%;
-  height: 1px;
-  background: #2d2d44;
-}
-
-.separateur-ou::before {
-  left: 0;
-}
-
-.separateur-ou::after {
-  right: 0;
-}
-
-.separateur-ou span {
-  background: #1a1a2e;
-  padding: 0 15px;
-  color: #b0b0b0;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* BOUTON WHATSAPP */
-.bouton-whatsapp-alt {
-  display: block;
-  text-align: center;
-  background: transparent;
-  color: #25d366;
-  padding: 15px 30px;
-  border: 2px solid #25d366;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.bouton-whatsapp-alt:hover {
-  background: #25d366;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-}
 .Réseaux-sociaux p {
   font-size: 14px;
   color: #b0b0b0;
@@ -960,74 +1281,4 @@ h6 {
 .Mes-liens a:hover {
   background: #6c5ce7;
   color: #ffffff;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .grille-competences {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .carrousel-temoignages {
-    flex-direction: column;
-  }
-
-  .bouton-carrousel {
-    display: none;
-  }
-
-  .enveloppe-contact {
-    grid-template-columns: 1fr;
-  }
-
-  .enveloppe-formulaire {
-    padding: 30px 20px;
-  }
-}
-
-/* Animation au scroll */
-.animer-scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animer-scroll.apparait {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Bouton retour en haut */
-.bouton-retour-haut {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: #6c5ce7;
-  color: #ffffff;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.bouton-retour-haut.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.bouton-retour-haut:hover {
-  background: #5647c7;
-  transform: translateY(-5px);
-}
-
-/* Effet 3D sur les cartes */
-.realisations .card {
-  transition: transform 0.1s ease, box-shadow 0.3s ease;
-  transform-style: preserve-3d;
 }
